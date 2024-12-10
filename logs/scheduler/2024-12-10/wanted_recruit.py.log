@@ -1,0 +1,16 @@
+[2024-12-10T15:31:08.023+0900] {processor.py:186} INFO - Started process (PID=1760267) to work on /home/jake/workspace/customize/Airflow/dags/wanted_recruit.py
+[2024-12-10T15:31:08.023+0900] {processor.py:914} INFO - Processing file /home/jake/workspace/customize/Airflow/dags/wanted_recruit.py for tasks to queue
+[2024-12-10T15:31:08.025+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:08.024+0900] {dagbag.py:588} INFO - Filling up the DagBag from /home/jake/workspace/customize/Airflow/dags/wanted_recruit.py
+[2024-12-10T15:31:08.030+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:08.029+0900] {dagbag.py:387} ERROR - Failed to import: /home/jake/workspace/customize/Airflow/dags/wanted_recruit.py
+Traceback (most recent call last):
+  File "/home/jake/workspace/customize/Airflow/.venv/lib/python3.8/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py", line 17, in <module>
+    from projects.wanted_recruit.modules.wanted_recruit_raw_data_crawler import wanted_crawling
+  File "/home/jake/workspace/customize/Airflow/src/projects/wanted_recruit/modules/wanted_recruit_raw_data_crawler.py", line 6, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+[2024-12-10T15:31:08.031+0900] {processor.py:927} WARNING - No viable dags retrieved from /home/jake/workspace/customize/Airflow/dags/wanted_recruit.py
+[2024-12-10T15:31:08.047+0900] {processor.py:208} INFO - Processing /home/jake/workspace/customize/Airflow/dags/wanted_recruit.py took 0.029 seconds

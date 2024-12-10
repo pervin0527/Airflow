@@ -267,187 +267,134 @@ def create_categories_list(category_tags):
     return categories
 
 
-async def transform_wanted_data(data):
-    job_detail = data.get("job", {}).get("detail", {}) ## 하나의 채용공고 데이터에서 job 하위에 있는 detail dict를 가져옴.
+def extract_nested_value(data: dict, path: str, default=None):
+    try:
+        value = data
+        for key in path.split('.'):
+            value = value[key]
+        return value
+    except (KeyError, TypeError):
+        return default
+    
+
+def create_company_data(data: dict, process_data: dict) -> dict:
+    company_fields = {
+        'id': ('job.company.id', str),
+        'name': ('job.company.name', str),
+        'industry': ('job.company.industry_name', str),
+        'description': ('job.detail.intro', str),
+        'tags': ('job.company_tags', lambda x: [tag["title"] for tag in x] if x else []),
+        'address': ('job.address.full_location', str),
+        'location': ('job.address.location', str),
+        'categories': ('job.category_tags', create_categories_list),
+        'logoImage': ('job.title_img.origin', str),
+    }
+    
+    company = {
+        field: converter(extract_nested_value(data, path))
+        for field, (path, converter) in company_fields.items()
+    }
+    
+    # Add static fields
+    company.update({
+        'welfare': process_data.get('welfare', []),
+        'sectors': None,
+        'bizNo': None,
+        'ceo': None,
+        'averageAnnualSalary': 0,
+        'homepage': None
+    })
+    
+    return company
+
+
+def create_job_data(data: dict, process_data: dict, reg_at: str, close_date: str) -> dict:
+    job_fields = {
+        'id': ('job.id', str),
+        'location': ('job.address.location', str),
+        'address': ('job.address.full_location', str),
+        'title': ('job.position', str),
+        'description': ('job.detail.intro', str),
+        'tasks': ('job.detail.main_tasks', str),
+        'requirements': ('job.detail.requirements', str),
+        'points': ('job.detail.preferred_points', str),
+        'infoUrl': ('share_link', str),
+        'tags': ('job.company_tags', lambda x: [tag["title"] for tag in x] if x else [])
+    }
+    
+    job = {
+        field: converter(extract_nested_value(data, path))
+        for field, (path, converter) in job_fields.items()
+    }
+    
+    # Add process data fields
+    job.update({
+        'activeFlag': True,
+        'salaryType': None,
+        'minSalary': None,
+        'maxSalary': None,
+        'regAt': reg_at,
+        'closeDate': close_date,
+        'careerType': process_data.get('career_type'),
+        'careerMin': process_data.get('career_start'),
+        'careerMax': process_data.get('career_end'),
+        'workType': process_data.get('work_type'),
+        'workDescription': extract_nested_value(data, 'job.detail.main_tasks'),
+        'educationType': process_data.get('education_type'),
+        'workdayContent': process_data.get('workday_content') or "주5일 근무",  # None이면 기본값 설정
+        'welfare': process_data.get('welfare', [])
+    })
+    
+    # Ensure infoUrl is properly set
+    job['infoUrl'] = None if job['infoUrl'] == "None" else job['infoUrl']
+    
+    return job
+
+
+
+async def transform_wanted_data(data: dict) -> dict:
+    job_detail = extract_nested_value(data, 'job.detail', {})
     details = {
-        "requirements": job_detail.get("requirements", None),
-        "main_tasks": job_detail.get("main_tasks", None),
-        "intro": job_detail.get("intro", None),
-        "benefits": job_detail.get("benefits", None),
-        "preferred_points": job_detail.get("preferred_points", None)
+        "requirements": job_detail.get("requirements"),
+        "main_tasks": job_detail.get("main_tasks"),
+        "intro": job_detail.get("intro"),
+        "benefits": job_detail.get("benefits"),
+        "preferred_points": job_detail.get("preferred_points")
     }
 
-    # 초기 값 설정
-    process_data = {
-        "welfare": [],
-        "career_start": None,
-        "career_end": None,
-        "career_type": None,
-        "work_type": None,
-        "education_type": None,
-        "workday_content": None,
-    }
-
+    # Process recruitment data through AI
     process_data = await process_recruits(details, 'wanted')
-    print(process_data)
-
-    # 각 필드를 개별적으로 파싱하고 예외 처리
-    try:
-        company_id = str(data["job"]["company"]["id"])
-    except KeyError:
-        company_id = None
-
-    try:
-        company_name = data["job"]["company"]["name"]
-    except KeyError:
-        company_name = None
-
-    try:
-        industry = data["job"]["company"]["industry_name"]
-    except KeyError:
-        industry = None
-
-    try:
-        description = data["job"]["detail"]["intro"]
-    except KeyError:
-        description = None
-
-    try:
-        tags = [tag["title"] for tag in data["job"]["company_tags"]]
-    except KeyError:
-        tags = []
-
-    try:
-        address = data["job"]['address']['full_location']
-    except KeyError:
-        address = None
-
-    try:
-        location = data["job"]['address']['location']
-    except KeyError:
-        location = None
-
-    try:
-        categories = create_categories_list(data["job"]['category_tags'])
-    except KeyError:
-        categories = []
-
-    try:
-        logoImage = data["job"]['title_img']['origin']
-    except KeyError:
-        logoImage = None
-
-    try:
-        job_id = str(data["job"]["id"])
-    except KeyError:
-        job_id = None
-
-    try:
-        job_location = data["job"]["address"]["location"]
-    except KeyError:
-        job_location = None
-
-    try:
-        activeFlag = True
-    except KeyError:
-        activeFlag = None
-
-    try:
-        job_address = data["job"]["address"]["full_location"]
-    except KeyError:
-        job_address = None
-
-    try:
-        title = data["job"]["position"]
-    except KeyError:
-        title = None
-
-    try:
-        job_description = data["job"]["detail"]["intro"]
-    except KeyError:
-        job_description = None
-
-    try:
-        tasks = data["job"]["detail"]["main_tasks"]
-    except KeyError:
-        tasks = None
-
-    try:
-        requirements = data["job"]["detail"]["requirements"]
-    except KeyError:
-        requirements = None
-
-    try:
-        points = data["job"]["detail"]["preferred_points"]
-    except KeyError:
-        points = None
-
-    try:
-        infoUrl = data["share_link"]
-    except KeyError:
-        infoUrl = None
-
-    # 한국 시간 기준으로 3개월 후의 날짜 계산
+    
+    # Calculate dates
     korea_tz = pytz.timezone('Asia/Seoul')
     reg_at = datetime.datetime.now(korea_tz).strftime('%Y-%m-%dT%H:%M:%S')
     close_date = (datetime.datetime.now(korea_tz) + datetime.timedelta(days=90)).strftime('%Y-%m-%dT%H:%M:%S')
-
-    # 필수 필드 검증
-    if not all([company_id, company_name, location, categories, job_id, job_location]):
+    
+    # Create company and job data
+    company_data = create_company_data(data, process_data)
+    job_data = create_job_data(data, process_data, reg_at, close_date)
+    
+    # Validate required fields
+    required_fields = [
+        company_data['id'], 
+        company_data['name'], 
+        company_data['location'],
+        company_data['categories'],
+        job_data['id'],
+        job_data['location']
+    ]
+    
+    if not all(required_fields):
         print("Missing required fields. Skipping this record.")
         return None
-
-    new_format = {
-        "recruits": [
-            {
-                "company": {
-                    "id": company_id,
-                    "name": company_name,
-                    "industry": industry,
-                    "description": description,
-                    "tags": tags,
-                    "welfare": process_data.get("welfare", []),
-                    "address": address,
-                    "location": location,
-                    "categories": categories,
-                    "logoImage": logoImage,
-                    "sectors": None,
-                    "bizNo": None,
-                    "ceo": None,
-                    "averageAnnualSalary": 0,
-                    "homepage": None
-                },
-                "job": {
-                    "id": job_id,
-                    "location": job_location,
-                    "activeFlag": activeFlag,
-                    "address": job_address,
-                    "title": title,
-                    "description": job_description,
-                    "tasks": tasks,
-                    "requirements": requirements,
-                    "salaryType": None,
-                    "minSalary": None,
-                    "maxSalary": None,
-                    "regAt": reg_at,
-                    "closeDate": close_date,
-                    "points": points,
-                    "careerType": process_data.get("career_type"),
-                    "careerMin": process_data.get("career_start"),
-                    "careerMax": process_data.get("career_end"),
-                    "workType": process_data.get("work_type"),
-                    "workDescription": tasks,
-                    "educationType": process_data.get("education_type"),
-                    "workdayContent": process_data.get("workday_content"),
-                    "infoUrl": infoUrl,
-                    "tags": tags,
-                    "welfare": process_data.get("welfare", []),
-                }
-            }
-        ]
+        
+    # Construct final format
+    return {
+        "recruits": [{
+            "company": company_data,
+            "job": job_data
+        }]
     }
-    
-    return new_format
 
 
 async def wanted_recruit_ai_process():

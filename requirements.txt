@@ -4,3 +4,5 @@ pymongo == 4.8.0
 openai == 1.35.7
 selenium == 4.23.1
 webdriver-manager == 4.0.1
+apache-airflow==2.9.0
+--constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.9.0/constraints-3.11.txt

@@ -1,0 +1,15 @@
+[2024-12-10T15:31:11.726+0900] {processor.py:186} INFO - Started process (PID=1760342) to work on /home/jake/workspace/customize/Airflow/.venv/lib/python3.8/site-packages/airflow/example_dags/example_sla_dag.py
+[2024-12-10T15:31:11.726+0900] {processor.py:914} INFO - Processing file /home/jake/workspace/customize/Airflow/.venv/lib/python3.8/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2024-12-10T15:31:11.727+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.727+0900] {dagbag.py:588} INFO - Filling up the DagBag from /home/jake/workspace/customize/Airflow/.venv/lib/python3.8/site-packages/airflow/example_dags/example_sla_dag.py
+[2024-12-10T15:31:11.737+0900] {processor.py:925} INFO - DAG(s) 'example_sla_dag' retrieved from /home/jake/workspace/customize/Airflow/.venv/lib/python3.8/site-packages/airflow/example_dags/example_sla_dag.py
+[2024-12-10T15:31:11.838+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.837+0900] {override.py:1901} INFO - Created Permission View: can delete on DAG:example_sla_dag
+[2024-12-10T15:31:11.847+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.847+0900] {override.py:1901} INFO - Created Permission View: can read on DAG:example_sla_dag
+[2024-12-10T15:31:11.854+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.854+0900] {override.py:1901} INFO - Created Permission View: can edit on DAG:example_sla_dag
+[2024-12-10T15:31:11.864+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.863+0900] {override.py:1901} INFO - Created Permission View: can create on DAG Run:example_sla_dag
+[2024-12-10T15:31:11.870+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.870+0900] {override.py:1901} INFO - Created Permission View: menu access on DAG Run:example_sla_dag
+[2024-12-10T15:31:11.877+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.877+0900] {override.py:1901} INFO - Created Permission View: can delete on DAG Run:example_sla_dag
+[2024-12-10T15:31:11.884+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.883+0900] {override.py:1901} INFO - Created Permission View: can read on DAG Run:example_sla_dag
+[2024-12-10T15:31:11.884+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.884+0900] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-10T15:31:11.895+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.895+0900] {dag.py:3262} INFO - Creating ORM DAG for example_sla_dag
+[2024-12-10T15:31:11.906+0900] {logging_mixin.py:190} INFO - [2024-12-10T15:31:11.906+0900] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2024-12-10 06:28:00+00:00, run_after=2024-12-10 06:30:00+00:00
+[2024-12-10T15:31:11.921+0900] {processor.py:208} INFO - Processing /home/jake/workspace/customize/Airflow/.venv/lib/python3.8/site-packages/airflow/example_dags/example_sla_dag.py took 0.200 seconds
