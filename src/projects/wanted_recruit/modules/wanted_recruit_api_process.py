@@ -18,100 +18,114 @@ load_dotenv(dotenv_path=env_path)
 api_key = os.getenv("OPENAI_API_KEY")
 openai_client = openai.AsyncOpenAI(api_key=api_key)
 
-default_prompt = """
-[JSON 키 정보 및 필드 설명]
+default_prompt = '''
+### Input Format
+채용 공고 텍스트 데이터
 
-- welfare (list): 복리 후생 정보
-    - name: 복리 후생 명칭 (str)
-    - description: 복리 후생 설명 (200자 이내, str)
+### Output Format
+JSON 형식의 구조화된 데이터:
+{
+    "welfare": [
+        {
+            "name": str,  // 복리 후생 명칭
+            "description": str  // 복리 후생 설명 (200자 이내)
+        }
+    ],
+    "career_start": int | None,  // 경력 시작 연수
+    "career_end": int | None,    // 경력 종료 연수
+    "career_type": enum str,     // 경력 유형
+    "work_type": enum str,       // 고용 형태
+    "education_type": enum str,  // 학력 요구사항
+    "workday_content": str       // 근무 형태
+}
 
-- career_start (int 또는 None): 경력 시작 연수 (예: 1년 이상이면 1)
-- career_end (int 또는 None): 경력 종료 연수 (예: "1~5년"이면 start=1, end=5)
-- career_type (enum str): 경력 유형
-    EXPERIENCED: "경력"
-    EXECUTIVE: "임원"
-    ENTRY_EXPERIENCED: "신입 또는 경력"
-    UNTIL_HIRED: "경력 무관"
+### Constraints
+1. career_type 가능 값:
+   - EXPERIENCED: "경력"
+   - EXECUTIVE: "임원"
+   - ENTRY_EXPERIENCED: "신입 또는 경력"
+   - UNTIL_HIRED: "경력 무관"
 
-- work_type (enum str): 고용 형태
-    FULL_TIME: "정규직"
-    CONTRACT: "계약직"
-    INTERN: "인턴"
+2. work_type 가능 값:
+   - FULL_TIME: "정규직"
+   - CONTRACT: "계약직"
+   - INTERN: "인턴"
 
-- education_type (enum str): 학력 요구 사항
-    NO_PREFERENCE: "학력 무관"
-    LOW_SCHOOL_DEGREE: "초졸 이하"
-    MIDDLE_SCHOOL_DEGREE: "중졸"
-    HIGH_SCHOOL_DEGREE: "고졸"
-    ASSOCIATE_DEGREE: "전문학사"
-    BACHELOR_DEGREE: "학사"
-    MASTER_DEGREE: "석사"
-    DOCTORAL_DEGREE: "박사"
+3. education_type 가능 값:
+   - NO_PREFERENCE: "학력 무관"
+   - LOW_SCHOOL_DEGREE: "초졸 이하"
+   - MIDDLE_SCHOOL_DEGREE: "중졸"
+   - HIGH_SCHOOL_DEGREE: "고졸"
+   - ASSOCIATE_DEGREE: "전문학사"
+   - BACHELOR_DEGREE: "학사"
+   - MASTER_DEGREE: "석사"
+   - DOCTORAL_DEGREE: "박사"
+'''
 
-- workday_content (str): 근무 일수 또는 근무 형태 (예: "주 5일제", "재택 근무")
+system_prompt = '''
+### Instruction
+채용 공고 텍스트에서 핵심 정보를 추출하여 지정된 JSON 형식으로 변환하시오.
 
-이 외의 내용은 불필요합니다.
-"""
+### Rules
+1. 모든 출력은 반드시 JSON 형식이어야 함
+2. 데이터 타입 규칙:
+   - null 값은 "None"이 아닌 null로 표기
+   - 숫자는 문자열이 아닌 숫자형으로 표기
+   - 문자열은 큰따옴표(") 사용
+3. 경력 연수 처리:
+   - "1~5년" → career_start: 1, career_end: 5
+   - "1년 이상" → career_start: 1, career_end: null
+   - 명시되지 않은 경우 → null
+4. welfare는 각각 독립된 객체로 분리하여 배열에 추가
 
-system_prompt = """
-[작업 설명]  
-여러 채용 공고 문장으로부터 핵심 채용 정보를 추출하여 예시 JSON 형태로 출력하는 작업입니다.
+### Example
+Input: 
+"신입/경력 채용, 4년제 대졸 이상, 정규직, 주5일 근무, 식대지원, 4대보험"
 
-[목표]  
-- 채용 공고에서 복리후생(welfare), 경력 사항(career_start, career_end, career_type), 고용 형태(work_type), 학력(education_type), 근무 일수/시간(workday_content) 등을 식별
-- 위의 정보들을 지정된 예제 JSON 구조에 맞춰 한글로 작성
-- 모든 내용은 JSON 형태로만 출력
-
-[중요 사항]  
-- 출력은 항상 JSON 형태여야 합니다.
-- 예시 JSON 구조를 충실히 따르십시오.
-- 모든 값은 올바른 데이터 타입과 형식을 따라야 합니다.
-  - None: 문자열(str) "None"
-  - 정수형 값: int
-  - 목록: list
-- 복리후생(welfare)은 여러 개일 경우 각각 별개의 객체로 나누어 welfare 배열에 추가
-- career_start / career_end는 경력 시작~종료 연수  
-  예: "1~5년" → career_start=1, career_end=5  
-  연수가 불명확할 경우 None
-- Enum 값은 지정된 목록 내에서 선택
-- workday_content는 주당 근무 형태를 나타내는 문자열로 설정
-
-[참고 예제 데이터 JSON 양식]
-"""
+Output:
+{
+    "welfare": [
+        {
+            "name": "식대지원",
+            "description": "식대 지원"
+        },
+        {
+            "name": "4대보험",
+            "description": "4대보험 가입"
+        }
+    ],
+    "career_start": null,
+    "career_end": null,
+    "career_type": "ENTRY_EXPERIENCED",
+    "work_type": "FULL_TIME",
+    "education_type": "BACHELOR_DEGREE",
+    "workday_content": "주5일 근무"
+}
+'''
 
 def generate_wanted_prompts(sample_data, all_text):
     messages = [
         {
             "role": "system",
             "content": f"""
-작업 환경 및 지침 정리:
-
-[예제 JSON 구조]  
-아래는 기본 형태의 예시 JSON입니다:
-{sample_data}
-
-[기본 지침 및 키 정보]  
+### Task Definition
 {default_prompt}
 
-[필수 지침사항]  
+### Instructions
 {system_prompt}
 
-[주의사항]  
-- 모든 필수 지침을 충실히 이행하십시오.
-- JSON 구조를 반드시 일관되게 유지하십시오.
-- 경력, 고용 형태, 학력 등은 지정된 Enum을 벗어나지 않도록 주의하십시오.
+### Reference Example
+{sample_data}
 """
         },
         {
             "role": "user",
             "content": f"""
-[요구사항]  
-1. 위의 필수지침사항을 모두 준수하여, 주어진 채용 정보 내용을 JSON으로 변환하십시오.
-2. 모든 값은 올바른 데이터 타입을 따라야 합니다.
-3. 예시 JSON 구조를 유지하며, 필요한 필드를 모두 채우십시오.
-
-[채용 정보 내용]  
+### Input
 {all_text}
+
+### Task
+위 채용공고 내용을 JSON 형식으로 변환하시오.
 """
         }
     ]
