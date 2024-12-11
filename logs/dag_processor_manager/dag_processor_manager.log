@@ -69,3 +69,663 @@ File Path                                                                       
 /home/jake/workspace/customize/Airflow/.venv/lib/python3.8/site-packages/airflow/example_dags/plugins/workday.py                                                                   0           0                                                            0
 ================================================================================
 [2024-12-10T15:31:21.100+0900] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-12-11T09:25:46.266+0900] {manager.py:470} INFO - Processing files using up to 1 processes at a time 
+[2024-12-11T09:25:46.266+0900] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2024-12-11T09:25:46.267+0900] {manager.py:472} INFO - Checking for new files in /home/jake/workspace/customize/Airflow/dags every 300 seconds
+[2024-12-11T09:25:46.267+0900] {manager.py:737} INFO - Searching for files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:25:46.268+0900] {manager.py:740} INFO - There are 2 files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:25:46.407+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               0           1  0.10s           2024-12-11T00:25:46
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           0           0
+================================================================================
+[2024-12-11T09:27:09.274+0900] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2024-12-11T09:27:09.443+0900] {manager.py:470} INFO - Processing files using up to 1 processes at a time 
+[2024-12-11T09:27:09.443+0900] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2024-12-11T09:27:09.443+0900] {manager.py:472} INFO - Checking for new files in /home/jake/workspace/customize/Airflow/dags every 300 seconds
+[2024-12-11T09:27:09.444+0900] {manager.py:737} INFO - Searching for files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:27:09.445+0900] {manager.py:740} INFO - There are 2 files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:27:09.660+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               0           1  0.10s           2024-12-11T00:27:09
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           0           0
+================================================================================
+[2024-12-11T09:27:39.685+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.90s           2024-12-11T00:27:20
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               0           1  0.10s           2024-12-11T00:27:24
+================================================================================
+[2024-12-11T09:28:08.721+0900] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2024-12-11T09:28:12.645+0900] {manager.py:470} INFO - Processing files using up to 1 processes at a time 
+[2024-12-11T09:28:12.646+0900] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2024-12-11T09:28:12.646+0900] {manager.py:472} INFO - Checking for new files in /home/jake/workspace/customize/Airflow/dags every 300 seconds
+[2024-12-11T09:28:12.646+0900] {manager.py:737} INFO - Searching for files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:28:12.648+0900] {manager.py:740} INFO - There are 2 files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:28:12.786+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               0           1  0.10s           2024-12-11T00:28:12
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           0           0
+================================================================================
+[2024-12-11T09:28:43.085+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:28:14
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               0           1  0.11s           2024-12-11T00:28:43
+================================================================================
+[2024-12-11T09:29:13.724+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  1.01s           2024-12-11T00:28:46
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.30s           2024-12-11T00:29:08
+================================================================================
+[2024-12-11T09:29:55.135+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.90s           2024-12-11T00:29:30
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:29:43
+================================================================================
+[2024-12-11T09:30:25.204+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:30:02
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:30:13
+================================================================================
+[2024-12-11T09:30:55.331+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:30:33
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.11s           2024-12-11T00:30:44
+================================================================================
+[2024-12-11T09:31:25.459+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:31:04
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.20s           2024-12-11T00:31:15
+================================================================================
+[2024-12-11T09:31:55.604+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:31:36
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:31:46
+================================================================================
+[2024-12-11T09:32:25.769+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:32:07
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:32:17
+================================================================================
+[2024-12-11T09:32:55.841+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:32:38
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:32:48
+================================================================================
+[2024-12-11T09:33:12.830+0900] {manager.py:737} INFO - Searching for files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:33:12.835+0900] {manager.py:740} INFO - There are 2 files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:33:25.919+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:33:09
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:33:19
+================================================================================
+[2024-12-11T09:33:55.988+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:33:40
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:33:50
+================================================================================
+[2024-12-11T09:34:26.336+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:34:11
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:34:21
+================================================================================
+[2024-12-11T09:34:57.308+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:34:42
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.11s           2024-12-11T00:34:52
+================================================================================
+[2024-12-11T09:35:28.083+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:35:13
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:35:23
+================================================================================
+[2024-12-11T09:35:58.994+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:35:44
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:35:54
+================================================================================
+[2024-12-11T09:36:30.020+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:36:15
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:36:25
+================================================================================
+[2024-12-11T09:37:00.820+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:36:46
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:36:55
+================================================================================
+[2024-12-11T09:37:31.688+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:37:17
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.11s           2024-12-11T00:37:26
+================================================================================
+[2024-12-11T09:38:02.617+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:37:48
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:37:57
+================================================================================
+[2024-12-11T09:38:12.858+0900] {manager.py:737} INFO - Searching for files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:38:12.860+0900] {manager.py:740} INFO - There are 2 files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:38:33.567+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:38:19
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:38:28
+================================================================================
+[2024-12-11T09:39:04.405+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:38:50
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:38:59
+================================================================================
+[2024-12-11T09:39:35.342+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:39:21
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:39:30
+================================================================================
+[2024-12-11T09:40:06.197+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:39:51
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.11s           2024-12-11T00:40:01
+================================================================================
+[2024-12-11T09:40:37.119+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:40:22
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:40:32
+================================================================================
+[2024-12-11T09:41:08.020+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:40:53
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:41:03
+================================================================================
+[2024-12-11T09:41:38.881+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:41:24
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.11s           2024-12-11T00:41:33
+================================================================================
+[2024-12-11T09:42:09.800+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:41:55
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:42:04
+================================================================================
+[2024-12-11T09:42:39.816+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:42:26
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:42:35
+================================================================================
+[2024-12-11T09:43:10.652+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:42:57
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:43:06
+================================================================================
+[2024-12-11T09:43:13.804+0900] {manager.py:737} INFO - Searching for files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:43:13.806+0900] {manager.py:740} INFO - There are 2 files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:43:41.573+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:43:28
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:43:37
+================================================================================
+[2024-12-11T09:44:12.427+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:43:59
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:44:08
+================================================================================
+[2024-12-11T09:44:43.354+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:44:30
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:44:39
+================================================================================
+[2024-12-11T09:45:14.261+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:45:01
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:45:10
+================================================================================
+[2024-12-11T09:45:45.232+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:45:31
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:45:41
+================================================================================
+[2024-12-11T09:46:15.360+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:46:02
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:46:12
+================================================================================
+[2024-12-11T09:46:45.933+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:46:33
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.11s           2024-12-11T00:46:43
+================================================================================
+[2024-12-11T09:47:16.788+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:47:04
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:47:14
+================================================================================
+[2024-12-11T09:47:47.757+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:47:35
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:47:44
+================================================================================
+[2024-12-11T09:48:14.180+0900] {manager.py:737} INFO - Searching for files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:48:14.184+0900] {manager.py:740} INFO - There are 2 files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:48:18.672+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:48:06
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:48:15
+================================================================================
+[2024-12-11T09:48:49.518+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:48:37
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:48:46
+================================================================================
+[2024-12-11T09:49:20.438+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:49:08
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:49:17
+================================================================================
+[2024-12-11T09:49:51.291+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:49:39
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:49:48
+================================================================================
+[2024-12-11T09:50:21.337+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:50:10
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:50:19
+================================================================================
+[2024-12-11T09:50:52.259+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:50:41
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:50:50
+================================================================================
+[2024-12-11T09:51:23.210+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:51:11
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:51:21
+================================================================================
+[2024-12-11T09:51:54.082+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:51:42
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.11s           2024-12-11T00:51:52
+================================================================================
+[2024-12-11T09:52:24.988+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:52:13
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:52:23
+================================================================================
+[2024-12-11T09:52:55.915+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:52:44
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:52:54
+================================================================================
+[2024-12-11T09:53:14.672+0900] {manager.py:737} INFO - Searching for files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:53:14.674+0900] {manager.py:740} INFO - There are 2 files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:53:26.842+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:53:15
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:53:25
+================================================================================
+[2024-12-11T09:53:57.724+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:53:46
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:53:55
+================================================================================
+[2024-12-11T09:54:28.599+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:54:17
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:54:26
+================================================================================
+[2024-12-11T09:54:59.601+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.91s           2024-12-11T00:54:48
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.20s           2024-12-11T00:54:57
+================================================================================
+[2024-12-11T09:55:30.560+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:55:19
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:55:28
+================================================================================
+[2024-12-11T09:56:01.388+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:55:50
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:55:59
+================================================================================
+[2024-12-11T09:56:32.312+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:56:21
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:56:30
+================================================================================
+[2024-12-11T09:57:03.181+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:56:52
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:57:01
+================================================================================
+[2024-12-11T09:57:34.101+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:57:22
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:57:32
+================================================================================
+[2024-12-11T09:58:05.060+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:57:53
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:58:03
+================================================================================
+[2024-12-11T09:58:14.904+0900] {manager.py:737} INFO - Searching for files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:58:14.908+0900] {manager.py:740} INFO - There are 2 files in /home/jake/workspace/customize/Airflow/dags
+[2024-12-11T09:58:35.904+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.80s           2024-12-11T00:58:24
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T00:58:34
+================================================================================
+[2024-12-11T09:59:06.810+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:58:55
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:59:05
+================================================================================
+[2024-12-11T09:59:37.692+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:59:26
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.21s           2024-12-11T00:59:36
+================================================================================
+[2024-12-11T10:00:08.625+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T00:59:57
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T01:00:06
+================================================================================
+[2024-12-11T10:00:39.542+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T01:00:28
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.11s           2024-12-11T01:00:37
+================================================================================
+[2024-12-11T10:01:10.411+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T01:00:59
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.11s           2024-12-11T01:01:08
+================================================================================
+[2024-12-11T10:01:49.663+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T01:01:37
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T01:01:49
+================================================================================
+[2024-12-11T10:02:20.247+0900] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                      PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/jake/workspace/customize/Airflow/dags/wanted_recruit.py                           1           0  0.81s           2024-12-11T01:02:08
+/home/jake/workspace/customize/Airflow/dags/simple_dag.py                               1           0  0.10s           2024-12-11T01:02:20
+================================================================================
+[2024-12-11T10:02:27.738+0900] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15

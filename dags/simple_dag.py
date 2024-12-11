@@ -22,8 +22,8 @@ with DAG(
     tags=["example"],
 ) as dag:
     
-    count_10 = BashOperator(
-        task_id="count_10",
+    count_test = BashOperator(
+        task_id="count_test",
         bash_command="for i in {1..10}; do echo $i; sleep 1; TEST",
     )
 
